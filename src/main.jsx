@@ -7,8 +7,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Team from './Team.jsx'
+import EventsPage from './EventsPage.jsx'
 import Root from './Root.jsx'
+import EventDetail from '../EventDetail.jsx'
 
 
 // import Root, { rootLoader } from "./routes/root";
@@ -21,8 +22,13 @@ const router = createBrowserRouter([
     // loader: rootLoader, - loader pro data route "/"
     children: [
       {
-        path: "team",
-        element: <Team />,
+        path: "events",
+        element: <EventsPage />,
+        // loader: teamLoader, - loader pro data route "/eventDetail"
+      },
+      {
+        path: "event-detail",
+        element: <EventDetail />,
         // loader: teamLoader, - loader pro data route "/eventDetail"
       },
     ],

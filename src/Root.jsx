@@ -1,12 +1,13 @@
 import { Outlet } from 'react-router-dom'
-import Layout from './assets/Layouts/Layout'
+import Layout from './Layouts/Layout'
 import { Box, Link } from '@chakra-ui/react'
 
 const Root = () => {
   return (
     <Box>
-        <Layout />
-        <Outlet />
+        <Layout>
+          <Outlet />
+        </Layout>
     </Box>
   )
 }
